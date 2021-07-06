@@ -4,133 +4,52 @@
 	padding: 0;
 }
 
-html{
-	background-color: #fff;
+html {
+	background-color: white;
 }
-#mobile_menu{
-	display:none;
-}
-
-img{
-	max-width:40%;
-	min-width:150px;
-	height:auto;
-}
-@media only screen and (max-width: 959px) {
-
-	aside h1 {font-size:135%;}
-	aside h1, section h2 {font-size:120%;}
-
-
-}
-@media only screen and (max-width:767px){
-	header img{float:none; max-width:}
-	header {text-align:center;}
-	section{
-		float:none;
-		padding-right:2.5%;
-		width:95%;
-	}
-	aside{
-		float:none;
-		width:95%;
-	}
-	article img{max-width:30%;}
-	section div{
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		column-count:2;
-
-	}
-	#nav_menu{
-		display:none;
-	}
-	#mobile_menu{
-		display:block;
-	}
-	.slicknav_menu{
-		background-color:#800000 !important;
-	}
-}
-
-@media only screen and(max-width:479px){
-	body{font-size:90%}
-}
-
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 100%;
-	max-width:960px;
+    font-size: 100%;
 	width: 99%;
+	max-width: 960px;
 	margin: 0 auto;
-	border: #931420 solid 3px;
+	border: 3px solid #931420;
 	background-color: #fffded;
-
 }
 
-
-header{
-	border-bottom: #931420 solid 3px;
-	padding-top: 1.5em;
-	padding-bottom: 2em;
-	background-image: -webkit-linear-gradient(65deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%,
-	#f6bb73 100%);
-}
 section {
-	width:34.375%;
-	float:right;
-	padding:0 20px 20px;
-	background:#fff;
-}
-aside{
-	width:59.375%;
-	padding-bottom:20px;
-	padding-left:20px;
-	background:#fff;
-	float:right;
-}
-aside.img{
-	padding-bottom:1em;
-}
-article{
-	padding:0.5em 0 0.5em;
-	border-top:2px solid #800000;
-	border-bottom:2px solid #800000;
-	float:left;
-}
-article.img{
-	float:right;
-	margin:0 0 0;
-	border:1px solid black;
-
-}
-article.p{
-	float:left;
-}
-h1{
-	font-size:150%;
-	padding-top:.25em;
-	margin:0 0 0 0;
-	float:left;
-}
-article.h2{
-	font-size:130%;
-	padding:0;
-	float:left;
-}
-article.h3{
-	font-size:105%;
-	padding-bottom:.25em;
-	float:left;
+	width: 65.625%;
+	float: right;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+	padding-bottom: 20px;
 }
 
+aside {
+	width: 26.875%;
+	float: right;
+	padding-left: 2.5%;
+	padding-bottom: 20px;
+}
+
+h1 {
+	font-size: 150%;
+	padding-top: 0.5em;
+	padding-bottom: 0.25em;
+	margin: 0;
+}
+
+.shadow {
+	text-shadow: 2px 2px 9px #800000 ;
+}
 
 /* the styles for the header */
-header img {
-	float: left;
-	padding-right: 30px;
-	padding-left: 30px;
+header {
+	border-bottom: 3px solid #931420;
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+	background:linear-gradient(30deg, #f6bb73 0%, white 30%, white 50%, white 80%, #f6bb73 100%)
 }
 
 header h2{
@@ -138,38 +57,36 @@ header h2{
 	color: #800000;
 }
 
-header h3{
-	font-size: 105%;
+header h3 {
+	font-size:130%;
 	font-style: italic;
-
-}
-header img{
-	float:left;
-	padding:0 3.75%;
 }
 
-header .shadow{
-	text-shadow: 2px 2px #800000;
+header img {
+	float: left;
+	padding-right: 3.75%;
+	padding-left: 3.75%;
 }
-/* the styles for the navigation menu */
-nav {
-	width: 100%;
-}
+
+/* Styles for the nav menu */
 #nav_menu ul {
-	list-style-type: none;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
 }
+
 #nav_menu ul li {
 	float: left;
 	width: 20%;
 }
+
+#nav_menu ul li:hover {
+	font-style: italic;
+}
+
 #nav_menu ul li a {
 	display: block;
-	/*width: 160px;*/
-	border: silver 3px;
-	width: 100%;
 	text-align: center;
 	padding: 1em 0;
 	text-decoration: none;
@@ -177,27 +94,32 @@ nav {
 	color: white;
 	font-weight: bold;
 }
-#nav_menu a.current {
-	color: yellow;
-}
-#nav_menu ul ul {
-	display: none;
-	position: absolute;
 
+#nav_menu ul ul {
+	width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
 }
+
 #nav_menu ul ul li {
 	float: none;
 }
+
 #nav_menu ul li:hover > ul {
 	display: block;
+	font-style: normal;
 }
+
 #nav_menu > ul::after {
-	content: "";
-	clear: both;
-	display: block;
+    content: "";
+    clear: both;
+    display: block;
+	font-style:none;
 }
-.current{
-	color:yellow;
+
+#nav_menu a.current {
+	color: yellow;
 }
 
 /* the styles for the section */
@@ -205,66 +127,139 @@ main {
 	clear: left;
 }
 
-main h1{
-	border-bottom:2px solid #800000;
-
-}
-
-main h2{
+section h2 {
 	font-size: 130%;
 	color: #800000;
 	padding-top: 0.5em;
-	padding-bottom: 0.25em;
+	padding-bottom:0.25em;
 }
 
-main h3{
-	font-size: 105%;
-	padding-top: 0.25em;
-	padding-bottom: 0.25em;
+section ul {
+	list-style-type: circle;
 }
 
-main a:focus{
-	font-style: italic;
-}
-
-main a:hover{
-	font-style: italic;
-}
-
-main img{
+section p {
 	padding-bottom: 0.5em;
 }
 
-main p{
-	padding-bottom: 0.5em;
-}
-
-main blockquote{
+section blockquote {
 	padding-right: 2em;
 	padding-left: 2em;
 	font-style: italic;
 }
 
-main ul{
-	padding-left: 1.25em;
+section ul {
 	padding-bottom: 0.25em;
+	padding-left: 1.25em;
 }
 
-main li{
+section li {
 	padding-bottom: 0.35em;
 }
 
-
-
-/* the styles for the footer */
-footer{
-	background-color: #931420;
-	clear:both;
+aside h2 {
+	font-size: 130%;
+	color: #800000;
+	padding-top: 0.5em;
+	padding-bottom:0.25em;
 }
 
-footer p{
+aside h3 {
+	font-size: 105%;
+	padding-bottom: 0.25em;
+}
+
+aside img {
+	padding-bottom: 1em;
+}
+
+aside a:hover, a:focus {
+	font-style: italic;
+}
+
+article {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+
+article img {
+	float: right;
+	border: 1px solid black;
+	max-width: 40%;
+	min-width: 150px;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+article h2 {
+	padding-top: 0;
+}
+
+article h3 {
+	font-size: 105%;
+	padding-bottom: 0.25em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+}
+
+footer p {
 	text-align: center;
 	color: white;
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+/* Mobile Menu Styles */
+#mobile_menu {
+	display: none;
+}
+
+/* Media Queries */
+
+/* Tablet portrait Desktop */
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+}
+
+/* Mobile landscaope to tablet portrait  */
+@media only screen and (max-width: 767px) {
+	header img { float: none; max-width:}
+	header { text-align: center; }
+	aside {
+		float: none;
+		padding-right: 2.5%;
+		width: 95%;
+	}
+	section {
+		float: none;
+		width: 95%;
+	}
+	article img { max-width: 30%; }
+	aside div {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000 !important;
+	}
+}
+
+/* Mobile portrait */
+@media only screen and(max-width: 479px) {
+	body { font-size: 90%;}
 }
