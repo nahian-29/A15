@@ -66,7 +66,7 @@
 }
 /* IE6/7 support */
 .slicknav_menu {
-*zoom: 1
+	*zoom: 1
 }
 /* 
     User Default Style
@@ -99,7 +99,6 @@
 .slicknav_menu {
 	background: #4c4c4c;
 	padding: 5px;
-	display: none;
 }
 .slicknav_nav {
 	color: #fff;
