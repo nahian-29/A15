@@ -99,6 +99,7 @@
 .slicknav_menu {
 	background: #4c4c4c;
 	padding: 5px;
+	display: none;
 }
 .slicknav_nav {
 	color: #fff;
